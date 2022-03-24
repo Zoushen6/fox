@@ -1,0 +1,103 @@
+.customized-table {
+
+    .el-button--text:hover {
+        color: $theme-color;
+    }
+
+    //表头高度
+    .el-table th.el-table__cell {
+        padding: 14px 0;
+    }
+
+    //no-border时表格没有横线
+    &.no-border .el-table {
+        .el-table__body .el-table__cell {
+            border: none;
+        }
+        th.el-table__cell.is-leaf{
+            border: none;
+        }
+    }
+
+    //table head bg-color and color
+    .el-table th.el-table__cell, .el-table .el-table__fixed-right-patch {
+        background-color: $bg-color-grey;
+        color: $font-color-base;
+    }
+
+    .el-table th.el-table__cell.is-leaf ,.el-table__body .el-table__cell {
+        //内部边框
+        border-color: $bg-color-divider;
+    }
+
+    .el-table .el-table__body .el-table__cell {
+        color: $font-color-secondary;
+    }
+
+    //鼠标悬停
+    .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+        background: #FFFAF4;
+    }
+
+    .el-table__fixed {
+        height: auto;
+    }
+
+    .el-table:before, .el-table__fixed::before, .el-table__fixed-right::before{
+        height: 0;
+    }
+
+    // 总计样式
+    .el-table__fixed-footer-wrapper .el-table__cell, .el-table__footer-wrapper .el-table__cell{
+        color: $font-color-base;
+        font-weight: $font-weight-bold;
+    }
+
+    // 横向滚动条被挡住
+    .empty-data.el-table--scrollable-x .el-table__body-wrapper {
+        z-index: 1;
+    }
+
+    // 降低按钮高度
+    .el-button--text {
+        padding: 4px 14px 4px 0;
+        color: $theme-color;
+    }
+
+    // 控制单行行高 30 + 12 * 2 padding
+    &:not(.mini-table) .el-table .el-table__body .cell {
+        line-height: 30px;
+    }
+
+    // 表头checkbox和表格中的对齐
+    .el-table__header .el-table-column--selection.el-table__cell .cell {
+        padding-left: 14px;
+    }
+
+    // inline-block时0高度的元素会撑开父盒子的scrollWidth, 或者最小高度为1时也会撑开 1px的效果更佳;
+    .el-table__body-wrapper[class*="is-scrolling"] {
+        .el-table__body {
+            min-height: 1px;
+            //display: inline-block;
+        }
+    }
+
+    //无数据时表格占满页面
+    .el-table__empty-block{
+        left: 0;
+        top: 0;
+        position: sticky;
+        width: 100%!important;
+    }
+}
+
+.mini-table {
+    .el-table, .el-button {
+        font-size: $font-size-addition;
+    }
+}
+
+// customizedTable的祖先class包含flex-1，没有给高度的容器统统在数据为空时设置成empty-table-wrapper
+[table='empty-table-wrapper'] {
+    overflow: hidden;
+}

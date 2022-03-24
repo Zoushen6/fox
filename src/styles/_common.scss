@@ -1,0 +1,109 @@
+.wm-iconfont { font-size: 20px; }
+
+.main-block {
+  background: $bg-color-white;
+  margin: 16px 0 0;
+  padding: 16px 16px 32px 16px;
+  border-radius: $border-radius-base;
+}
+
+.custom-block{
+    background: $bg-color-white;
+    border-radius: $border-radius-base;
+}
+
+.main-gutter {
+  display: inline-block;
+  width: 2em;
+}
+
+.dialog-footer .el-button, .main-button {
+  min-width: 82px;
+}
+
+.custom-form-length .el-input__inner {
+  width: 300px !important;
+}
+
+.ell-1 {@include ell(1);}
+.ell-2 {@include ell(2);}
+.ell-3 {@include ell(3);}
+.ell-4 {@include ell(4);}
+
+.uniform-link{
+    color: $font-color-auxiliary;
+    cursor: pointer;
+    line-height: 56px;
+    font-size: $font-size-addition;
+    &:before{
+        content: "\e61d\00A0";
+        display: inline-block;
+        transform: rotate(90deg) translateX(2px);
+    }
+}
+
+.uniform-title{
+    font-size: $font-size-headings;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: $font-weight-bold;
+    color: $font-color-base;
+    line-height: $line-height-base;
+}
+
+.customized-title.uniform-title{
+
+    &:before{
+        content:"";
+        display: inline-block;
+        position: relative;
+        top: 0.5px;
+        background: $theme-color;
+        margin-right: 5px;
+        width: 3px;
+        height: $font-size-base;
+    }
+}
+
+.uniform-desc{
+    font-size: $font-size-addition;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: $font-weight-base;
+    color: $font-color-auxiliary;
+}
+
+.uniform-shadow{
+    border-bottom:1px solid $bg-color-divider;
+    box-shadow: 0px 0px 11px 0px rgba(213,213,213,0.6);
+}
+
+.add-shadow .top-bar{
+    border-bottom:1px solid $bg-color-divider;
+    box-shadow: 0px 0px 11px 0px rgba(213,213,213,0.6);
+}
+
+.setting-box {
+    padding: 0 $margin-size-middle $margin-size-large;
+    margin: 0 16px 16px 16px;
+    background-color: $bg-color-white;
+}
+
+//.customized-scroll, .el-table__body-wrapper{
+//    &::-webkit-scrollbar {
+//        width: 17px;
+//        height: 9px;
+//        background: transparent;
+//    }
+//
+//    &::-webkit-scrollbar-thumb {
+//        background: hsla(0, 0%, 53%, 0.2);
+//        border-radius: 5px;
+//    }
+//
+//    &:hover::-webkit-scrollbar-thumb {
+//        background: hsla(0, 0%, 53%, 0.5);
+//    }
+//
+//    &:hover::-webkit-scrollbar-track {
+//        background: hsla(0, 0%, 53%, 0.1);
+//    }
+//}

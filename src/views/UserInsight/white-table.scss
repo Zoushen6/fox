@@ -1,0 +1,59 @@
+.white-table {
+
+  /deep/ .el-table,
+  /deep/ .el-table__empty-block,
+  /deep/ .el-table:before,
+  /deep/ .el-table:after,
+  /deep/ .el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell,
+  /deep/ .el-table tr,
+  /deep/ .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+    background: transparent;
+  }
+
+  /deep/ .el-table {
+    color: $font-color-base;
+  }
+
+  /deep/ .el-table .el-table__header .el-table__cell {
+    background: transparent;
+  }
+
+
+  /deep/ .el-table thead th {
+    color: $font-color-base;
+    font-size: 12px;
+  }
+
+  /deep/ .el-table__header-wrapper .el-table__cell {
+    padding: 7px 0;
+  }
+
+  /deep/ .el-table__body-wrapper .el-table__cell {
+    padding: 8px 0;
+  }
+
+  /deep/ .el-table__header-wrapper {
+    .cell {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  //由于外左边框过长bug 重写外左边框
+  /deep/.el-table--border {
+    //外边框颜色
+    border-color: $bg-color-divider;
+    border-left: 0;
+  }
+  /deep/tbody {
+    tr {
+      td:nth-child(1) {
+        border-left: 1px solid $bg-color-divider;
+      }
+    }
+  }
+  /deep/th.el-table__cell.is-leaf {
+    &:first-child{
+      border-left: 1px solid $bg-color-divider;
+    }
+  }
+}

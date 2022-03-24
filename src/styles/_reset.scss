@@ -1,0 +1,18 @@
+
+*{margin:initial;padding:initial;}
+img{border:0px;}  a,link {text-decoration: none;} a:hover { text-decoration: none;}
+ul,li,ol {white-space:normal;list-style:none;} table {border-collapse: collapse;}
+h1,h2,h3,em,i { font-weight: normal; font-style:normal;}
+
+body {
+    background-color: $bg-color-grey;
+    color: $font-color-base;
+    font: #{$font-size-base}/#{$line-height-base} $fontF-yahei !important;
+    text-align: left;
+}
+
+input, button, textarea {
+    font: #{$font-size-base}/#{$line-height-base} $fontF-yahei;
+}
+
+html,body,#app { height: 100%; }

@@ -1,0 +1,39 @@
+
+.customized-dialog {
+
+    .dialog-form {
+        width: 380px;
+        margin: 0 auto;
+
+        .el-input__inner {
+            height: 36px;
+        }
+
+        .el-select {
+            width: 100%;
+        }
+
+        .dialog-textarea .el-textarea__inner {
+            min-height: 80px!important;
+        }
+
+        .el-form-item:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+}
+
+//去除标题border
+.dialog-header-border .el-dialog__header {
+    border-bottom: solid 1px #EBEBEB;
+}
+
+.dialog-blue-title {
+    box-shadow: inset 2px 0 $color-link;
+    height: $font-size-addition;
+    line-height: $font-size-addition;
+    padding-left: 4px;
+    color: $font-color-base;
+}

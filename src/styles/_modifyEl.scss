@@ -1,0 +1,380 @@
+@import "./CustomizedDialog.scss";
+@import "./CustomizedTable.scss";
+
+.el-popover {
+    min-width: 60px !important;
+    border: initial !important;
+}
+
+.el-image__error, .el-image__inner, .el-image__placeholder {
+    object-fit: cover;
+}
+
+.el-tooltip__popper.is-dark {
+    background: rgba(0, 0, 0, .7) !important;
+}
+
+.el-tooltip__popper[x-placement^=left] .popper__arrow, .el-tooltip__popper[x-placement^=left] .popper__arrow::after, .el-tooltip__popper[x-placement^=right] .popper__arrow, .el-tooltip__popper[x-placement^=right] .popper__arrow::after {
+    border-left-color: rgba(0, 0, 0, .7) !important;
+    border-right-color: rgba(0, 0, 0, .7) !important;
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow, .el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+    border-top-color: rgba(0, 0, 0, .5) !important;
+}
+
+.disable-popper-padding {
+    padding: initial !important;
+
+    .el-button {
+        border-radius: initial;
+        border: initial;
+    }
+
+    .el-button + .el-button {
+        margin: initial;
+    }
+}
+
+.el-table {
+    .el-button.is-disabled.is-plain, .el-button.is-disabled.is-plain:hover, .el-button.is-disabled.is-plain:focus {
+        border: initial;
+    }
+}
+
+.el-pager li {
+    font-weight: normal;
+}
+
+.data-trend-detail.el-popover {
+    background: #031122;
+    color: $font-color-white;
+    font-size: $font-size-addition;
+    box-shadow: 0px 0px 14px 0px rgba(55, 104, 135, 1) inset;
+    border: 1px solid #376887;
+    max-height: 120px;
+    transform: translateY(-15px);
+
+    div {
+        overflow: auto;
+    }
+
+    .popper__arrow {
+        border-bottom-color: #1E405C !important;
+        border-top-color: #1E405C !important;
+    }
+}
+
+.cost-rank-detail.el-popover {
+    background: #031122;
+    color: $font-color-white;
+    font-size: $font-size-addition;
+    box-shadow: 0px 0px 14px 0px rgba(55, 104, 135, 1) inset;
+    border: 1px solid #376887;
+    max-height: 120px;
+
+    div {
+        overflow: auto;
+    }
+
+    .popper__arrow {
+        border-top-color: #1E405C !important;
+    }
+}
+
+.creatives .el-select-group__wrap::after {
+    content: '';
+    box-sizing: border-box;
+    background: none !important;
+    border-bottom: dashed 1.5px $bg-color-divider;
+}
+
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+    background-color: $bg-color-hover !important;
+}
+
+.el-cascader-node:not(.is-disabled):hover {
+    background-color: $bg-color-hover !important;
+}
+
+.disable-padding {
+    width: 330px !important;
+    height: 180px !important;
+
+    .img-url {
+        .el-image {
+            width: 330px;
+            height: 180px;
+
+            img {
+                width: 330px;
+                height: 179px;
+                object-fit: contain
+            }
+        }
+    }
+}
+
+.el-select-group__title {
+    color: $theme-color !important;
+    font-size: $font-size-base !important;
+}
+
+.customized-form {
+
+    &.padding-top {
+        padding-top: 24px;
+        padding-bottom: 4px;
+    }
+
+    .date-range-without-close-icon {
+        .el-range__close-icon {
+            display: none;
+            width: 0;
+        }
+    }
+
+    &.el-form--inline .el-form-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .el-form-item, .el-form-item__content {
+        font-size: $font-size-addition;
+    }
+
+    .el-form-item__content, .el-input__icon {
+        line-height: 32px;
+    }
+
+    .el-input__inner {
+        height: 32px;
+        font-size: 12px;
+        font-weight: 400;
+        border-color: $font-color-disabled;
+    }
+
+    .short-item {
+        .el-input__inner, &.el-input__inner {
+            min-width: 140px;
+            width: 9vw;
+            max-width: 180px;
+        }
+
+        .el-select__tags-text {
+            display: inline-block;
+            max-width: 1.6vw;
+        }
+    }
+
+    .middle-item {
+        .el-input__inner, &.el-input__inner {
+            min-width: 180px;
+            width: 11.8vw;
+            max-width: 225px;
+        }
+
+        .el-select__tags-text {
+            display: inline-block;
+            max-width: 4vw;
+        }
+    }
+
+    .long-item {
+        .el-input__inner, &.el-input__inner {
+            min-width: 220px;
+            width: 13vw;
+            max-width: 250px;
+        }
+
+        .el-select__tags-text {
+            display: inline-block;
+            max-width: 4.5vw;
+        }
+    }
+
+    .time-picker {
+
+        .el-range__icon, .el-range-separator {
+            line-height: 24px;
+            opacity: 0.5;
+        }
+
+        .el-range-separator {
+            color: #999999;
+        }
+
+        .el-range-input, .el-range-separator {
+            font-size: $font-size-addition;
+        }
+
+        /deep/input::-webkit-input-placeholder{
+            color: $font-color-auxiliary;
+            opacity: 0.5;
+        }
+    }
+
+    .single-time-picker {
+        //单天时间选择框
+        /deep/.el-input__prefix {
+            color: $font-color-auxiliary;
+            opacity: 0.5;
+        }
+    }
+
+    .el-input input::-webkit-input-placeholder {
+        color: $font-color-auxiliary;
+        opacity: 0.5;
+    }
+
+    //下拉框文字
+    .el-select input::-webkit-input-placeholder {
+        color: $font-color-auxiliary;
+        opacity: .5;
+    }
+
+    //下拉框禁用状态文字#999999半透明
+    input:disabled {
+        -webkit-text-fill-color: rgba(153, 153, 153, 0.5);
+    }
+
+    .el-select .el-input.is-disabled .el-input__inner {
+        border-color: $font-color-disabled;
+        background-color: $bg-color-grey;
+        color: $theme-color;
+    }
+
+    .el-button {
+        padding: 8px 16px;
+    }
+
+    //禁用按钮样式
+    .el-button.is-disabled.is-plain, .el-button.is-disabled.is-plain:hover, .el-button.is-disabled.is-plain:focus{
+        background-color: $bg-color-white;
+        color: $button-color-disabled;
+        border: 1px solid  $button-color-disabled;
+    }
+
+    //朴素按钮样式
+    .el-button.is-plain {
+        background-color: $bg-color-white;
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+
+    .el-button.is-plain:hover {
+        background-color: $bg-color-hover;
+        color: $theme-color;
+    }
+
+    //批量推送图标带上这个类
+    .push-style {
+        padding: 7px 16px;
+    }
+
+
+    .blue-button {
+        background-color: #4063DF;
+        border-color: #4063DF;
+    }
+    .blue-button:hover {
+        background-color: #6682e5;
+        border-color: #6682e5;
+    }
+
+    .input-with-select .el-select {
+        width: 92px;
+
+        .el-input--suffix .el-input__inner {
+            padding-right: 26px;
+            width: 92px;
+            min-width: initial;
+        }
+
+        .el-icon-arrow-up {
+            width: 18px;
+        }
+
+        //左侧下拉框
+        .el-input__inner, .el-input-group__prepend div.el-select:hover .el-input__inner {
+
+        }
+
+        & .el-input__inner, &:hover .el-input__inner {
+            color: $font-color-base;;
+        }
+    }
+
+    .el-date-editor, .input-with-select .el-select {
+        input::-webkit-input-placeholder{
+            color: $font-color-auxiliary;
+            opacity: 0.5;
+        }
+    }
+
+    .item-with-span {
+        padding-left: 15px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+
+        .el-form-item__content {
+            line-height: 30px;
+        }
+
+        .el-input__inner {
+            border: initial;
+            height: 28px;
+            width: 210px;
+        }
+
+        .el-range__icon, .el-range-separator {
+            line-height: 22px;
+        }
+    }
+
+}
+
+.customized-button {
+    .el-button, &.el-button {
+        padding: 8px 16px;
+    }
+}
+
+//下拉框文字大小
+.el-select-dropdown__item.hover, .el-popper .el-select-dropdown__item {
+    font-size: $font-size-addition;
+    //color: $font-color-base;
+}
+
+.el-collapse-arrow-text {
+
+    .el-collapse-item__arrow {
+        margin: 0 16px 0 auto;
+    }
+
+    .el-collapse-item__arrow:before {
+        font-family: "iconfont", PingFangSC-Medium, PingFang SC !important;
+        font-size: 12px;
+        font-style: normal;
+        color: $font-color-auxiliary;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "展开  \e61d";
+    }
+
+    .el-collapse-item__arrow.is-active {
+        transform: initial;
+
+        &:before {
+            content: "折叠  \e61b";
+        }
+    }
+}
+
+.redirect-download {
+    &:hover {
+        text-decoration: underline;
+    }
+    margin: 0 5px;
+    color: $theme-color;
+}

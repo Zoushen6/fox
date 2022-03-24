@@ -1,0 +1,57 @@
+//mixins 变量
+$legacy-support-for-ie: true !default;
+$inline-block-alignment: middle !default;
+
+//格式化字体&颜色
+$fontF-yahei: Microsoft YaHei, Helvetica, sans-serif;
+$fontF-song: SimSun, Helvetica, sans-serif;
+
+$font-size-large: 48px;  //超大
+$font-size-stress: 30px;  //页面核心强调
+$font-size-headlines: 20px;  //大标题
+$font-size-headings: 16px;  //小标题
+$font-size-base: 14px;  //常规内容
+$font-size-addition: 12px;  //辅助内容
+$font-size-mini: 10px;  //小内容
+
+$font-weight-bold: 600;  //加粗
+$font-weight-base: 400;  //默认
+
+$theme-color: #F1902C; //主题色
+
+$font-color-base: #333333;  //默认颜色
+$font-color-secondary: #666666; //次级颜色
+$font-color-auxiliary: #999999; //辅助颜色
+$font-color-disabled: #D9D9D9; //辅助颜色
+$font-color-white: #FFFFFF; //辅助颜色
+$font-color-blue: #7DDDFF; //数据可视化蓝
+$font-color-plain:#F2F5FF; //朴素按钮背景色
+
+$bg-color-grey: #F5F5F5; //背景颜色
+$bg-color-white: #FFFFFF; //背景颜色
+$bg-color-divider: #EBEBEB; //背景颜色
+$bg-color-hover: rgba(255, 250, 244, 1); //背景颜色
+
+$color-link: #4063DF;
+$color-success: #40D2C4;
+$color-warning: #FFA34B;
+$color-danger: #FF7775;
+$color-blue: #5773FF;
+$color-light-blue-blue: #51C7FF;
+$color-light-white: #F4F8FE;
+$color-light-blue: #EDF0FF;
+$color-light-grey: #D0F7F4;
+
+$line-height-base: 24px;  //默认行高
+$line-height-large: 48px;  //默认行高
+$line-height-huge: 60px;  //默认行高
+
+$border-radius-base: 4px;
+
+$margin-size-large: 32px;
+$margin-size-middle: 24px;
+$margin-size-base: 16px;
+
+$button-color-disabled: #CCCCCC; //按钮禁用字体
+
+$font-family-alternate: alternate, sans-serif;

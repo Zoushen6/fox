@@ -1,0 +1,39 @@
+.form-title {
+    margin-right: 32px;
+    line-height: 32px;
+    vertical-align:top;
+    color: $font-color-base;
+    font-weight: $font-weight-bold;
+}
+
+.customized-form {
+    .short-item .el-input__inner {
+        color: $font-color-base;
+    }
+}
+
+.empty-chart {
+    position: relative;
+}
+
+.empty-chart:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    display: block;
+    background: url("~@images/empty-chart.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.empty-chart:after {
+    content: '暂无数据';
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $font-color-secondary;
+}

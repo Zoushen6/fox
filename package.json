@@ -1,0 +1,78 @@
+{
+  "name": "wisefox",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "clean": "rimraf ../ads-desk/web/css & rimraf ../ads-desk/web/js & rimraf ../ads-desk/web/img & rimraf ../ads-desk/web/fonts",
+    "build:develop": "vue-cli-service build  --mode develop",
+    "build:test": "vue-cli-service build  --mode test",
+    "build:pro": "vue-cli-service build  --mode production",
+    "preview:develop": "set NODE_ENV=develop && node build/index.js --preview --mode develop",
+    "preview:test": "set NODE_ENV=test && node build/index.js --preview --mode test",
+    "preview:pro": "set NODE_ENV=pro && node build/index.js --preview --mode production",
+    "module": "npx webpack ./src/main.js  --analyze --mode production",
+    "webpackConfig": "vue inspect > output.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.13.0",
+    "echarts": "5.2.0",
+    "element-ui": "^2.15.1",
+    "file-saver": "^2.0.5",
+    "lodash": "latest",
+    "screenfull": "^5.1.0",
+    "vue": "^2.6.12",
+    "vue-clipboard2": "^0.3.1",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2",
+    "xlsx": "^0.17.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-plugin-eslint": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
+    "autoprefixer": "9.5.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "chalk": "2.4.2",
+    "eslint": "^7.27.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "http-proxy": "^1.18.1",
+    "mime-types": "^2.1.32",
+    "node-sass": "^5.0.0",
+    "postcss-loader": "^6.1.1",
+    "runjs": "4.3.2",
+    "sass-loader": "^10.1.1",
+    "svg-sprite-loader": "^6.0.9",
+    "tinypng-webpack-plugin": "^2.0.0",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.46.0",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.7.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 versions",
+    "not ie <= 8",
+    "chrome >= 14",
+    "safari >= 3",
+    "ios >= 8",
+    "android >= 4.0"
+  ]
+}
